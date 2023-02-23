@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './home.less';
-import { Button } from 'antd';
+import Button from '@library/components/Button';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         >
           Learn React
         </a>
-        <Button type="primary">Click Antd</Button>
+        <Button />
       </header>
     </div>
   );
