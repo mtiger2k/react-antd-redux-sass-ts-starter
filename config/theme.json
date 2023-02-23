@@ -1,0 +1,23 @@
+{
+  "custom-space": "16px",
+
+  "black": "#232528",
+  "font-size-base": "14px",
+  "primary-color": "#0079FF",
+  "error-color": "#f5222d",
+
+  "menu-item-height": "40px",
+  "menu-item-boundary-margin": "0",
+  "menu-item-vertical-margin": "0",
+  "menu-collapsed-width": "60px",
+  "menu-item-font-size": "12px",
+  "menu-item-color": "#606266",
+
+  "border-color-base": "#EEE",
+  "btn-height-base": "32px",
+  "border-radius-base": "2px",
+  "form-item-margin-bottom": "12px",
+  "layout-header-height": "50px",
+  "layout-header-background": "#FFF",
+  "layout-header-padding": "0 20px"
+}

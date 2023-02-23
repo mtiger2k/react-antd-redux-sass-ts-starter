@@ -28,6 +28,8 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 
 const createEnvironmentHash = require('./webpack/persistentCache/createEnvironmentHash');
 
+const theme = require('./theme.json');
+
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 
@@ -542,6 +544,24 @@ module.exports = function (webpackEnv) {
                 },
                 'sass-loader'
               ),
+            },
+            {
+              test: /\.less$/,
+              use: [
+                {
+                  loader: 'style-loader',
+                }, {
+                  loader: 'css-loader'
+                }, {
+                  loader: 'less-loader',
+                  options: {
+                    lessOptions: { // 如果使用less-loader@5，请移除 lessOptions 这一级直接配置选项。
+                      modifyVars: theme,
+                      javascriptEnabled: true,
+                    },
+                  },
+                }
+              ]
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
